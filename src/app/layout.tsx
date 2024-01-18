@@ -20,7 +20,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={poppins.className}>{children}</body>
+      <body
+        className={
+          poppins.className +
+          ' flex min-h-screen flex-col items-center p-24 bg-dots bg-[#313434] text-white'
+        }
+      >
+        <h1 className='text-6xl font-bold mb-96'>Short - It</h1>
+        {children}
+      </body>
     </html>
   );
 }

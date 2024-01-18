@@ -5,9 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@prisma/client':
+    specifier: 5.8.1
+    version: 5.8.1(prisma@5.8.1)
+  clsx:
+    specifier: ^2.1.0
+    version: 2.1.0
   lucide-react:
     specifier: ^0.312.0
     version: 0.312.0(react@18.2.0)
+  nanoid:
+    specifier: ^5.0.4
+    version: 5.0.4
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -40,6 +49,9 @@ devDependencies:
   postcss:
     specifier: ^8
     version: 8.4.33
+  prisma:
+    specifier: ^5.8.1
+    version: 5.8.1
   tailwindcss:
     specifier: ^3.3.0
     version: 3.4.1
@@ -283,6 +295,46 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@prisma/client@5.8.1(prisma@5.8.1):
+    resolution: {integrity: sha512-xQtMPfbIwLlbm0VVIVQY2yqQVOxPwRQhvIp7Z3m2900g1bu/zRHKhYZJQWELqmjl6d8YwBy0K2NvMqh47v1ubw==}
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      prisma: 5.8.1
+    dev: false
+
+  /@prisma/debug@5.8.1:
+    resolution: {integrity: sha512-tjuw7eA0Us3T42jx9AmAgL58rzwzpFGYc3R7Y4Ip75EBYrKMBA1YihuWMcBC92ILmjlQ/u3p8VxcIE0hr+fZfg==}
+
+  /@prisma/engines-version@5.8.1-1.78caf6feeaed953168c64e15a249c3e9a033ebe2:
+    resolution: {integrity: sha512-f5C3JM3l9yhGr3cr4FMqWloFaSCpNpMi58Om22rjD2DOz3owci2mFdFXMgnAGazFPKrCbbEhcxdsRfspEYRoFQ==}
+
+  /@prisma/engines@5.8.1:
+    resolution: {integrity: sha512-TJgYLRrZr56uhqcXO4GmP5be+zjCIHtLDK20Cnfg+o9d905hsN065QOL+3Z0zQAy6YD31Ol4u2kzSfRmbJv/uA==}
+    requiresBuild: true
+    dependencies:
+      '@prisma/debug': 5.8.1
+      '@prisma/engines-version': 5.8.1-1.78caf6feeaed953168c64e15a249c3e9a033ebe2
+      '@prisma/fetch-engine': 5.8.1
+      '@prisma/get-platform': 5.8.1
+
+  /@prisma/fetch-engine@5.8.1:
+    resolution: {integrity: sha512-+bgjjoSFa6uYEbAPlklfoVSStOEfcpheOjoBoNsNNSQdSzcwE2nM4Q0prun0+P8/0sCHo18JZ9xqa8gObvgOUw==}
+    dependencies:
+      '@prisma/debug': 5.8.1
+      '@prisma/engines-version': 5.8.1-1.78caf6feeaed953168c64e15a249c3e9a033ebe2
+      '@prisma/get-platform': 5.8.1
+
+  /@prisma/get-platform@5.8.1:
+    resolution: {integrity: sha512-wnA+6HTFcY+tkykMokix9GiAkaauPC5W/gg0O5JB0J8tCTNWrqpnQ7AsaGRfkYUbeOIioh6woDjQrGTTRf1Zag==}
+    dependencies:
+      '@prisma/debug': 5.8.1
 
   /@rushstack/eslint-patch@1.7.0:
     resolution: {integrity: sha512-Jh4t/593gxs0lJZ/z3NnasKlplXT2f+4y/LZYuaKZW5KAaiVFL/fThhs+17EbUd53jUVJ0QudYCBGbN/psvaqg==}
@@ -677,6 +729,11 @@ packages:
 
   /client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
+
+  /clsx@2.1.0:
+    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert@2.0.1:
@@ -1870,6 +1927,12 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  /nanoid@5.0.4:
+    resolution: {integrity: sha512-vAjmBf13gsmhXSgBrtIclinISzFFy22WwCYoyilZlsrRXNIHSwgFQ1bEdjRwMT3aoadeIF6HMuDRlOxzfXV8ig==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+    dev: false
+
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
@@ -2172,6 +2235,14 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
     dev: true
+
+  /prisma@5.8.1:
+    resolution: {integrity: sha512-N6CpjzECnUHZ5beeYpDzkt2rYpEdAeqXX2dweu6BoQaeYkNZrC/WJHM+5MO/uidFHTak8QhkPKBWck1o/4MD4A==}
+    engines: {node: '>=16.13'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 5.8.1
 
   /prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
