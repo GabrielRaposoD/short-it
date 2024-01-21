@@ -1,7 +1,9 @@
 import './globals.css';
 
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+import { Toaster } from '@/components/Toaster';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -23,11 +25,14 @@ export default function RootLayout({
       <body
         className={
           poppins.className +
-          ' flex min-h-screen flex-col items-center p-24 bg-dots bg-[#313434] text-white'
+          ' flex min-h-screen flex-col items-center p-24 bg-dots bg-[#313434] text-white gap-y-96'
         }
       >
-        <h1 className='text-6xl font-bold mb-96'>Short - It</h1>
+        <Link href='/'>
+          <h1 className='text-6xl font-bold'>Short - It</h1>
+        </Link>
         {children}
+        <Toaster />
       </body>
     </html>
   );

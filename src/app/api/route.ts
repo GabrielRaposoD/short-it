@@ -1,7 +1,8 @@
+import { NextRequest } from 'next/server';
 import { nanoid } from 'nanoid';
 import { prisma } from '@/services/db';
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   const { url } = await request.json();
 
   let shortenedUrl = nanoid(5);
