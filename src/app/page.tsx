@@ -68,9 +68,9 @@ export default function Home() {
       <p className='text-xl mb-8 text-center'>
         The Simplest URL Shortener You Were Waiting For
       </p>
-      <div className='flex flex-row gap-x-3 w-full items-center justify-center'>
+      <div className='flex md:flex-row flex-col md:gap-3 gap-5 w-full items-center justify-center'>
         <div
-          className={cs('relative w-1/2 text-white', {
+          className={cs('relative md:w-1/2 w-full text-white', {
             'text-opacity-15': shortenerState === 'loading',
             'text-red-100': shortenerState === 'error',
             'text-green-100': shortenerState === 'success',
@@ -82,7 +82,7 @@ export default function Home() {
             placeholder='Enter your link here'
             value={url}
             className={cs(
-              'bg-[#1C1E20] pr-3 pl-8 py-2.5 rounded-md border border-solid w-full',
+              'bg-[#1C1E20] pr-3 pl-8 py-2.5 rounded-md border border-solid w-full md:text-base text-sm',
               {
                 'border-red-500': shortenerState === 'error',
                 'border-white': ['initial', 'loading'].includes(shortenerState),

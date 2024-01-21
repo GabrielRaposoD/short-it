@@ -29,7 +29,7 @@ export default function RootLayout({
         }
       >
         <Link href='/'>
-          <h1 className='text-6xl font-bold'>Short - It</h1>
+          <h1 className='md:text-6xl font-bold text-5xl'>Short - It</h1>
         </Link>
         {children}
         <Toaster />
